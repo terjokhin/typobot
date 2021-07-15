@@ -26,7 +26,7 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist build",
     "ts-node": "ts-node",
-    "startDev": "node dist/tsc/main.js"
+    "startDev": "yarn run build && node dist/tsc/main.js"
   },
   "dependencies": {
     "telegraf": "^4.4.0"

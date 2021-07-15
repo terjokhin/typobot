@@ -11,8 +11,11 @@ function loadEnv(value: string) {
 const token: string = loadEnv('TOKEN');
 const bot = new Telegraf(token);
 
-bot.command('typobot', (ctx) => ctx.reply('new school'));
+bot.command('typobot', (ctx) => {
+  console.log(`got command from user ${ctx.message.from.first_name}`);
+  ctx.reply('new school');
+});
 bot.launch();
 
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
+process.once('SIGINT', () => { bot.stop('SIGINT'); console.log('got sigint'); });
+process.once('SIGTERM', () => { bot.stop('SIGTERM'); console.log('got sigterm'); });
