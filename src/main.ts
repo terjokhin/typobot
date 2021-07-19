@@ -11,8 +11,11 @@ function loadEnv(value: string) {
 const token: string = loadEnv('TOKEN');
 const bot = new Telegraf(token);
 
+bot.on('text', (ctx) => console.log(ctx.message));
+
 bot.command('typobot', (ctx) => {
   console.log(`got command from user ${ctx.message.from.first_name}`);
+  console.log(typeof ctx.update);
   ctx.reply('new school');
 });
 bot.launch();
