@@ -26,7 +26,8 @@
     "format": "eslint src/ --ext .js,.jsx,.ts,.tsx --fix",
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist build",
-    "startDev": "nodemon src/main.ts"
+    "startDev": "nodemon src/main.ts",
+    "debug": "DEBUG=* ts-node src/main.ts"
   },
   "dependencies": {
     "telegraf": "^4.4.0",
