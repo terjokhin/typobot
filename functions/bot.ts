@@ -31,4 +31,5 @@ const handler: Handler = async (event, _context) => {
   }
 };
 
-export { handler as default };
+// eslint-disable-next-line import/prefer-default-export
+export { handler };
