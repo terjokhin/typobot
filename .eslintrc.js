@@ -6,12 +6,13 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'airbnb-base',
   ],
   rules: {
     'no-console': 'off',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
+    'no-unused-vars': 'off',
+    'max-len': ['error', { code: 120 }],
   },
 };
