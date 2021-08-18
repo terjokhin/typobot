@@ -13,6 +13,7 @@ bot.use(stage.middleware());
 bot.command('antibot', (ctx) => ctx.scene.enter('antibot', { isBot: true }));
 
 bot.start((ctx) => {
+  console.log('hey');
   ctx.reply('hey!');
 });
 
