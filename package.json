@@ -25,6 +25,7 @@
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "format": "eslint src/ --ext .js,.jsx,.ts,.tsx --fix",
     "build": "tsc -p tsconfig.json",
+    "build1": "react-scripts build",
     "clean": "rm -rf dist build",
     "startDev": "nodemon src/main.ts",
     "debug": "DEBUG=* ts-node src/main.ts"
@@ -32,9 +33,28 @@
   "dependencies": {
     "@netlify/functions": "^0.7.2",
     "@types/debug": "^4.1.7",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
     "debug": "^4.3.2",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
     "supports-color": "^9.0.2",
     "telegraf": "^4.4.0",
     "typegram": "^3.4.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
